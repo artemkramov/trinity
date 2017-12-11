@@ -39,13 +39,26 @@ public class TrinityTree {
         if (isExpanded) {
             ArrayList<TrinityNode> leaves = node.getLeaves();
             for (TrinityNode leave : leaves) {
-                this.buildTreeByNode(leave, minRange, currentSize);
+                this.buildTreeByNode(leave, minRange, maxRange);
             }
         }
     }
-    
+
     public String learnTemplate() {
-        return this.root.learnTemplate("");
+        return this.root.learnTemplate();
+    }
+
+    public void traverse() {
+        this.traverseRecursive(root);
+    }
+
+    private void traverseRecursive(TrinityNode node) {
+        if (node != null) {
+            traverseRecursive(node.prefix);
+            node.print();
+            traverseRecursive(node.separator);
+            traverseRecursive(node.suffix);
+        }
     }
 
     /**
@@ -57,7 +70,7 @@ public class TrinityTree {
         private TrinityNode prefix;
         private TrinityNode separator;
         private TrinityNode suffix;
-        private ArrayList<String> documents;
+        private ArrayList<String> documents = new ArrayList<>();
 
         public void setText(String _text) {
             this.text = _text;
@@ -107,7 +120,7 @@ public class TrinityTree {
         }
 
         public boolean isLeaf() {
-            return this.prefix == null;
+            return StringUtils.isEmpty(this.text);
         }
 
         public ArrayList<TrinityNode> getLeaves() {
@@ -150,12 +163,14 @@ public class TrinityTree {
                 pattern.clearMap();
                 boolean isFound = true;
                 for (String document : this.documents) {
-                    if (document.equals(base) || document.isEmpty()) {
+                    if (document == null || document.isEmpty()) {
                         continue;
                     }
                     List<Integer> matches = findMatches(document, base, i, patternSize);
                     isFound = matches.size() > 0;
+
                     if (!isFound) {
+                        pattern.clearMap();
                         break;
                     }
                     TrinityMap mapItem = new TrinityMap();
@@ -177,7 +192,7 @@ public class TrinityTree {
             }
             String base = this.documents.get(0);
             for (int i = 1; i < this.documents.size(); i++) {
-                if (base.length() < this.documents.get(i).length()) {
+                if (base == null || (this.documents.get(i) != null && base.length() > this.documents.get(i).length())) {
                     base = this.documents.get(i);
                 }
             }
@@ -186,8 +201,12 @@ public class TrinityTree {
 
         private List<Integer> findMatches(String text, String base, int offset, int patternSize) {
             String substring = base.substring(offset, offset + patternSize);
+            if (substring.equals("<br/><br/")) {
+                int a = base.length();
+                int b = 4;
+            }
             KMPStringSearch kmpModel = new KMPStringSearch();
-            return kmpModel.searchString(text, substring);
+            return kmpModel.searchString(substring, text);
         }
 
         private void createChildren(TrinityPattern trinityPattern) {
@@ -196,10 +215,12 @@ public class TrinityTree {
             TrinityNode suffix = new TrinityNode();
             this.setText(trinityPattern.getPattern());
             this.documents.forEach((document) -> {
-                List<Integer> matches = trinityPattern.getMapByKey(document);
-                prefix.computePrefix(matches, document);
-                separator.computeSeparator(matches, document, trinityPattern.getPattern().length());
-                suffix.computeSuffix(matches, document, trinityPattern.getPattern().length());
+                if (document != null) {
+                    List<Integer> matches = trinityPattern.getMapByKey(document);
+                    prefix.computePrefix(matches, document);
+                    separator.computeSeparator(matches, document, trinityPattern.getPattern().length());
+                    suffix.computeSuffix(matches, document, trinityPattern.getPattern().length());
+                }
             });
             this.setPrefix(prefix);
             this.setSeparator(separator);
@@ -213,8 +234,10 @@ public class TrinityTree {
                 prefixString = "";
             } else {
                 prefixString = document.substring(0, firstOccurrence);
+                int a = 2;
             }
-            this.getPrefix().getDocuments().add(prefixString);
+            this.getDocuments().add(prefixString);
+
         }
 
         public void computeSeparator(List<Integer> matches, String document, int patternSize) {
@@ -230,21 +253,22 @@ public class TrinityTree {
                     separatorString = document.substring(firstOccurrence + patternSize, secondOccurrence);
                 }
             }
-            this.getSeparator().getDocuments().add(separatorString);
+            this.getDocuments().add(separatorString);
         }
 
         public void computeSuffix(List<Integer> matches, String document, int patternSize) {
             String suffixString;
             int lastOccurrence = matches.get(matches.size() - 1);
-            if (lastOccurrence + patternSize == matches.size() - 1) {
+            if (lastOccurrence + patternSize == document.length() - 1) {
                 suffixString = "";
             } else {
-                suffixString = document.substring(lastOccurrence, lastOccurrence + patternSize);
+                suffixString = document.substring(lastOccurrence + patternSize, document.length());
             }
-            this.getSuffix().getDocuments().add(suffixString);
+            this.getDocuments().add(suffixString);
         }
 
-        public String learnTemplate(String regex) {
+        public String learnTemplate() {
+            String regex = "";
             if (this.isOptional()) {
                 regex += "(";
             }
@@ -252,27 +276,25 @@ public class TrinityTree {
                 if (this.hasVariability()) {
                     regex += "A";
                 }
-            }
-            else {
-                regex += this.prefix.learnTemplate(regex);
+            } else {
+                regex += this.prefix.learnTemplate();
                 regex += this.text;
                 if (this.isRepeatable()) {
-                    regex += "(" + this.separator.learnTemplate(regex) + this.text;
+                    regex += "(" + this.separator.learnTemplate() + this.text;
                     if (this.separator.containsNull()) {
                         regex += ")*";
-                    }
-                    else {
+                    } else {
                         regex += ")+";
                     }
                 }
-                regex += this.suffix.learnTemplate(regex);
+                regex += this.suffix.learnTemplate();
             }
             if (this.isOptional()) {
                 regex += ")?";
             }
             return regex;
         }
-        
+
         public boolean containsNull() {
             boolean result = false;
             for (String document : this.documents) {
@@ -303,7 +325,7 @@ public class TrinityTree {
             if (this.documents.size() > 1) {
                 String previousDocument = this.documents.get(0);
                 for (int i = 1; i < this.documents.size(); i++) {
-                    if (!previousDocument.equals(this.documents.get(i))) {
+                    if (previousDocument.equals(this.documents.get(i))) {
                         result = false;
                         break;
                     }
@@ -319,6 +341,9 @@ public class TrinityTree {
             boolean result = false;
             KMPStringSearch kmp = new KMPStringSearch();
             for (String document : this.documents) {
+                if (document == null || document.isEmpty()) {
+                    continue;
+                }
                 List<Integer> matches = kmp.searchString(this.text, document);
                 if (matches.size() > 1) {
                     result = true;
@@ -326,6 +351,19 @@ public class TrinityTree {
                 }
             }
             return result;
+        }
+
+        public void print() {
+            System.out.println("Pattern: " + this.text + "\n");
+            for (int i = 0; i < this.documents.size(); i++) {
+                System.out.println("Row#" + i + " ");
+                if (documents.get(i) == null) {
+                    System.out.println("nill");
+                } else {
+                    System.out.println(documents.get(i));
+                }
+                System.out.println("\n");
+            }
         }
 
     }

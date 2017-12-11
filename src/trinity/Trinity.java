@@ -23,7 +23,8 @@ public class Trinity {
         TrinityTree tree = new TrinityTree();
         ArrayList<String> documents = readFiles();
         tree.setDocuments(documents);
-        tree.buildTree(0, 10);
+        tree.buildTree(3, 115);
+        //tree.traverse();
         String template = tree.learnTemplate();
         System.out.println("Template: ");
         System.out.println(template);
