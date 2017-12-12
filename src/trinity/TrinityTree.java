@@ -5,9 +5,11 @@
  */
 package trinity;
 
-import com.sun.javafx.scene.control.skin.VirtualFlow;
+import com.google.gson.Gson;
+import java.io.FileWriter;
 import java.util.ArrayList;
 import java.util.List;
+import org.apache.commons.lang3.StringEscapeUtils;
 import org.apache.commons.lang3.StringUtils;
 
 /**
@@ -17,6 +19,8 @@ import org.apache.commons.lang3.StringUtils;
 public class TrinityTree {
 
     private TrinityNode root = new TrinityNode();
+    
+    public int labelCount = 0;
 
     public TrinityTree() {
     }
@@ -45,19 +49,30 @@ public class TrinityTree {
     }
 
     public String learnTemplate() {
-        return this.root.learnTemplate();
+        return this.root.learnTemplate(this);
     }
 
-    public void traverse() {
-        this.traverseRecursive(root);
+    public void traverseForPrint() {
+        List<TrinityExportItem> items = new ArrayList<>();
+        this.traverseRecursiveForPrint(root, null, items);
+        Gson gson = new Gson();
+        try {
+            String jsonString = gson.toJson(items);
+            FileWriter writer = new FileWriter("C:\\wamp\\www\\test.ak\\basic-example\\file.json");
+            writer.write(jsonString);
+            writer.flush();
+        } catch (Exception ex) {
+            int t = 4;
+        }
+        int a = 4;
     }
 
-    private void traverseRecursive(TrinityNode node) {
+    private void traverseRecursiveForPrint(TrinityNode node, TrinityNode parent, List<TrinityExportItem> items) {
         if (node != null) {
-            traverseRecursive(node.prefix);
-            node.print();
-            traverseRecursive(node.separator);
-            traverseRecursive(node.suffix);
+            node.printForDraw(parent, items);
+            traverseRecursiveForPrint(node.prefix, node, items);
+            traverseRecursiveForPrint(node.separator, node, items);
+            traverseRecursiveForPrint(node.suffix, node, items);
         }
     }
 
@@ -120,7 +135,7 @@ public class TrinityTree {
         }
 
         public boolean isLeaf() {
-            return StringUtils.isEmpty(this.text);
+            return StringUtils.isEmpty(this.text) || this.text == null;
         }
 
         public ArrayList<TrinityNode> getLeaves() {
@@ -159,7 +174,7 @@ public class TrinityTree {
             TrinityPattern pattern = new TrinityPattern();
             pattern.pattern = "";
             String base = this.findShortestPath();
-            for (int i = 0; i < base.length() - patternSize; i++) {
+            for (int i = 0; i < base.length() - patternSize + 1; i++) {
                 pattern.clearMap();
                 boolean isFound = true;
                 for (String document : this.documents) {
@@ -168,7 +183,7 @@ public class TrinityTree {
                     }
                     List<Integer> matches = findMatches(document, base, i, patternSize);
                     isFound = matches.size() > 0;
-
+                   
                     if (!isFound) {
                         pattern.clearMap();
                         break;
@@ -201,9 +216,8 @@ public class TrinityTree {
 
         private List<Integer> findMatches(String text, String base, int offset, int patternSize) {
             String substring = base.substring(offset, offset + patternSize);
-            if (substring.equals("<br/><br/")) {
-                int a = base.length();
-                int b = 4;
+            if (!substring.contains(">") || !substring.contains("<")) {
+                return new ArrayList<>();
             }
             KMPStringSearch kmpModel = new KMPStringSearch();
             return kmpModel.searchString(substring, text);
@@ -267,27 +281,28 @@ public class TrinityTree {
             this.getDocuments().add(suffixString);
         }
 
-        public String learnTemplate() {
+        public String learnTemplate(TrinityTree tree) {
             String regex = "";
             if (this.isOptional()) {
                 regex += "(";
             }
             if (this.isLeaf()) {
                 if (this.hasVariability()) {
-                    regex += "A";
+                    regex += "{LABEL" + tree.labelCount + "}";
+                    tree.labelCount++;
                 }
             } else {
-                regex += this.prefix.learnTemplate();
+                regex += this.prefix.learnTemplate(tree);
                 regex += this.text;
                 if (this.isRepeatable()) {
-                    regex += "(" + this.separator.learnTemplate() + this.text;
+                    regex += "(" + this.separator.learnTemplate(tree) + this.text;
                     if (this.separator.containsNull()) {
                         regex += ")*";
                     } else {
                         regex += ")+";
                     }
                 }
-                regex += this.suffix.learnTemplate();
+                regex += this.suffix.learnTemplate(tree);
             }
             if (this.isOptional()) {
                 regex += ")?";
@@ -321,18 +336,18 @@ public class TrinityTree {
         }
 
         private boolean hasVariability() {
-            boolean result = true;
+            boolean result = false;
             if (this.documents.size() > 1) {
                 String previousDocument = this.documents.get(0);
                 for (int i = 1; i < this.documents.size(); i++) {
-                    if (previousDocument.equals(this.documents.get(i))) {
-                        result = false;
-                        break;
+                    if (previousDocument != null) {
+                        if (!previousDocument.equals(this.documents.get(i))) {
+                            result = true;
+                            break;
+                        }
                     }
                     previousDocument = this.documents.get(i);
                 }
-            } else {
-                result = false;
             }
             return result;
         }
@@ -353,19 +368,34 @@ public class TrinityTree {
             return result;
         }
 
-        public void print() {
-            System.out.println("Pattern: " + this.text + "\n");
+        public void printForDraw(TrinityNode parent, List<TrinityExportItem> items) {
+            TrinityExportItem item = new TrinityExportItem();
+            item.id = "ID" + System.identityHashCode(this);
+            item.documents.add("Pattern: " + StringEscapeUtils.escapeHtml4(this.text));
+            String row = "";
             for (int i = 0; i < this.documents.size(); i++) {
-                System.out.println("Row#" + i + " ");
                 if (documents.get(i) == null) {
-                    System.out.println("nill");
+                    row = "nill";
                 } else {
-                    System.out.println(documents.get(i));
+                    String s = documents.get(i);
+                    if (s.isEmpty()) {
+                        s = "e";
+                    }
+                    row = s;
                 }
-                System.out.println("\n");
+                item.documents.add(StringEscapeUtils.escapeHtml4(row));
             }
+            item.parent = "ID" + System.identityHashCode(parent);
+            items.add(item);
         }
 
+    }
+
+    private class TrinityExportItem {
+
+        private String id;
+        private String parent;
+        private List<String> documents = new ArrayList<>();
     }
 
     private class TrinityPattern {

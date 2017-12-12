@@ -20,15 +20,15 @@ public class Trinity {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        
         TrinityTree tree = new TrinityTree();
         ArrayList<String> documents = readFiles();
         tree.setDocuments(documents);
-        tree.buildTree(3, 115);
-        //tree.traverse();
+        tree.buildTree(8, 300);
+//        tree.traverseForPrint();
         String template = tree.learnTemplate();
         System.out.println("Template: ");
         System.out.println(template);
-        // TODO code application logic here
     }
     
     public static ArrayList<String> readFiles() {
@@ -36,6 +36,8 @@ public class Trinity {
         list.add(readFile("E:\\DATA(G)\\workspace\\Trinity\\example\\1.txt"));
         list.add(readFile("E:\\DATA(G)\\workspace\\Trinity\\example\\2.txt"));
         list.add(readFile("E:\\DATA(G)\\workspace\\Trinity\\example\\3.txt"));
+        list.add(readFile("E:\\DATA(G)\\workspace\\Trinity\\example\\4.txt"));
+        list.add(readFile("E:\\DATA(G)\\workspace\\Trinity\\example\\5.txt"));
         return list;
     }
     
