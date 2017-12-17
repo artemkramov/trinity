@@ -9,6 +9,7 @@ import com.google.gson.Gson;
 import java.io.FileWriter;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.regex.Pattern;
 import org.apache.commons.lang3.StringEscapeUtils;
 import org.apache.commons.lang3.StringUtils;
 
@@ -49,7 +50,7 @@ public class TrinityTree {
     }
 
     public String learnTemplate() {
-        return this.root.learnTemplate(this);
+        return this.root.learnTemplate(this).replace("\\E\\Q", "");
     }
 
     public void traverseForPrint() {
@@ -273,11 +274,12 @@ public class TrinityTree {
         public void computeSuffix(List<Integer> matches, String document, int patternSize) {
             String suffixString;
             int lastOccurrence = matches.get(matches.size() - 1);
-            if (lastOccurrence + patternSize == document.length() - 1) {
+            if (lastOccurrence + patternSize == document.length()) {
                 suffixString = "";
             } else {
                 suffixString = document.substring(lastOccurrence + patternSize, document.length());
             }
+            int a = document.length();
             this.getDocuments().add(suffixString);
         }
 
@@ -288,18 +290,18 @@ public class TrinityTree {
             }
             if (this.isLeaf()) {
                 if (this.hasVariability()) {
-                    regex += "{LABEL" + tree.labelCount + "}";
+                    regex += "(.+)";//"{LABEL" + tree.labelCount + "}";
                     tree.labelCount++;
                 }
             } else {
                 regex += this.prefix.learnTemplate(tree);
-                regex += this.text;
+                regex += Pattern.quote(this.text);
                 if (this.isRepeatable()) {
-                    regex += "(" + this.separator.learnTemplate(tree) + this.text;
+                    regex += "(" + this.separator.learnTemplate(tree) + Pattern.quote(this.text);
                     if (this.separator.containsNull()) {
-                        regex += ")*";
+                        regex += ")?";
                     } else {
-                        regex += ")+";
+                        regex += ")?";
                     }
                 }
                 regex += this.suffix.learnTemplate(tree);
@@ -329,7 +331,7 @@ public class TrinityTree {
                     counter++;
                 }
             }
-            if (counter > 0 && counter < this.documents.size() - 2) {
+            if (counter > 0 && counter < this.documents.size() - 1) {
                 result = true;
             }
             return result;

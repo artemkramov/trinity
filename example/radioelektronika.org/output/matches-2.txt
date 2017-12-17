@@ -1,0 +1,48 @@
+﻿36_preview.pdf" onclick="load_preview('http://radioelektronika.org/public/journals/16/preview/2017/S0735272717110036_preview.png', 'http://radioelektronika.org/public/journals/16/preview/2017/S0735272717110036
+36_preview.png" title="Noor Mohammed, V. Interference mitigation in uplink STBC MC-CDMA system based on PIC receiver (2017). doi: 10.3103/S0735272717110036." alt="Noor Mohammed, V. Interference mitigation in uplink STBC MC-CDMA system based on PIC receiver (2017). doi: 10.3103/S0735272717110036
+36
+36
+36
+36
+36
+41143
+Vali Noor Mohammed
+3-2942-5339
+VIT University, Vellore<br/>India</p><p>Assistant Professor SG</p></div><div class="separator"></div><div id="authorBio"><p><em>Narayanappa Srinatha</em><br/>VIT University<br/>India</p><p></p></div><div class="separator"></div><div id="authorBio"><p><em>Partha Sarathi Mallick</em><br/>VIT University<br/>India</p><
+null
+null
+null
+null
+null
+Lakshmanan Nithyanandan
+null
+null
+Pondicherry Engineering College<br/>India</p><p>
+36/0" class="current" target="_parent">Noor Mohammed
+41143_en_US.png" alt="Alamouti STBC with multiple transmitting antennas" width="300" height="170
+Interference mitigation in uplink STBC MC-CDMA system based on PIC receiver
+Vali Noor Mohammed, Narayanappa Srinatha, Partha Sarathi Mallick, Lakshmanan Nithyanandan
+Multi Carrier Code Division Multiple Access (MC-CDMA) is attractive technique for high speed data transmission in multipath fading channel. MC-CDMA system cannot handle the sudden time variations of the channel which cause the subcarriers to lose their orthogonality. The loss of orthogonality between the subcarriers of a user or unwanted correlation between the spreading codes of different user can lead to increase in Multiple Access Interference (MAI). Space Time Block Code (STBC) based MC-CDMA system is chosen to achieve full diversity and transmission rate without the knowledge of Channel State Information (CSI) at the transmitter. Thus, in the paper STBC is introduced at the transmitter to improve the quality of the receiver. Space Time Block Code-Parallel Interference Cancellation (STBC-PIC) receiver has been proposed for MC-CDMA system. In the proposed STBC-PIC receiver, at each interference cancellation stage, weighted signal of the other user is subtracted from signal of the desired user, thereby reducing the MAI and improving the BER performance. From the simulation results, it is observed that the proposed receiver outperforms STBC-Orthogonal Complete Complementary Code (STBC-OCCC), STBC-Minimum Mean Square Error (STBC-MMSE) and STBC-Zero Forcing (STBC-ZF) receivers for MAI reduction
+MIMO; MC CDMA; STBC; multicarrier code division multiple access; multiple input-multiple output; multiple access interference; space time block coding; parallel interference cancellation
+36/111721
+HAITHAM, J. Taha; SALLEH, M.F.M. Multi-carrier transmission techniques for wireless communication systems: A survey. <em>WSEAS Trans. Commun.</em>, v.8, n.5, p.457-472, 2009. URI: <a href="http://www.wseas.us/e-library/transactions/communications/2009/31-558.pdf">http://www.wseas.us/e-library/transactions/communications/2009/31-558.pdf</a>.</p><p>HARA, S.; PRASAD, R. <em>Multicarrier Techniques for 4G Mobile Communications</em>. Boston–London: Artech House, 2003.</p><p>SARALA, B.; VENKATESWARALU, D.S.; BHANDARI, B.N. Overview of MC CDMA PAPR reduction techniques. <em>Int. J. Distributed Parallel Systems</em>, v.3, n.2, p.193-206, 2012. DOI: <a href="https://doi.org/10.5121/ijdps.2012.3217">https://doi.org/10.5121/ijdps.2012.3217</a>.</p><p>FAZEL, K.; KAISER, S. <em>Multicarrier and Spread Spectrum Systems</em>, 2nd ed. UK: Wiley Publishers, 2008. DOI: <a href="https://doi.org/10.1002/9780470714249">https://doi.org/10.1002/9780470714249</a>.</p><p>BIGLIERI, Ezio; CALDERBANK, Robert; CONSTANTINIDES, Anthony; GOLDSMITH, Andrea; PAULRAJ, Arogyaswami; POOR, H. Vincent. <em>MIMO Wireless Communications</em>. United Kingdom: Cambridge University Press, 2010.</p><p>D’ORAZIO, Leandro; SACCHI, Claudio; FEDRIZZI, Riccardo; DE NATALE, Francesco G.B. An adaptive minimum-BER approach for multi-user detection in STBC-MIMO MC-CDMA systems. <em>Proc. of IEEE GLOBECOM Conf.</em>, 26–30 Nov. 2007, Washington. DC, USA. IEEE, 2007, p.3427-3431. DOI: <a href="https://doi.org/10.1109/GLOCOM.2007.650">https://doi.org/10.1109/GLOCOM.2007.650</a>.</p><p>IRAJI, S.; LILLEBERG, J. Interference cancellation for space-time block-coded MC-CDMA systems over multipath fading channels. <em>Proc. of IEEE Vehicular Technology Conf.</em>, 6-9 Oct. 2003, Orlando, FL, USA. IEEE, 2003, v.2, p.1104-1108. DOI: <a href="https://doi.org/10.1109/VETECF.2003.1285192">https://doi.org/10.1109/VETECF.2003.1285192</a>.</p><p>PORTIER, F.; BAUDARS, J.-Y.; HELARD, J.-F. Performance of STBC MC-CDMA systems over outdoor realistic MIMO channels. <em>Proc. of IEEE 60th Vehicular Technology Conf.</em>, 26-29 Sept. 2004, Los Angeles, CA, USA. IEEE, 2004, v.4, p.2409-2413. DOI: <a href="https://doi.org/10.1109/VETECF.2004.1400485">https://doi.org/10.1109/VETECF.2004.1400485</a>.</p><p>LI, H.; YANGFE, W.; TAN, Z.; CHENG, S. Performance of space-time block-coded MC-CDMA system in multipath fading channel. <em>Proc. of IEEE Int. Symp. on Microwave, Antenna, Propagation and EMC Technologies for Wireless Communications</em>, 8-12 Aug. 2005, Beijing, China. IEEE, 2005, p.1546-1550. DOI: <a href="https://doi.org/10.1109/MAPE.2005.1618221">https://doi.org/10.1109/MAPE.2005.1618221</a>.</p><p>KHAN, M.A.; UMAIR, M.; CHOUDHRY, M.A.S. Acceleration to LMS based STBC MC-CDMA receiver. <em>Int. J. Scientific &amp; Engineering Research</em>, v.4, n.8, p.925-929, 2013.</p><p>ZHAO, Fayong. PIC receiver for MIMO MC-CDMA systems based on LCRLSCMA. <em>Proc. of 4th IEEE Conf. on Wireless Communications, Networking and Mobile Computing</em>, WiCOM’08, 12-14 Oct. 2008, Dalian, China. IEEE, 2008, p.520-523. DOI: <a href="https://doi.org/10.1109/WiCom.2008.131">https://doi.org/10.1109/WiCom.2008.131</a>.</p><p>UMAIR, M.; KHAN, M.A.; CHOUDRY, M.A.S. GA backing to STBC based MC-CDMA systems. <em>Proc. of 4th IEEE Int. Conf. on Intelligent Systems Modelling and Simulation</em>, 29-31 Jan. 2013, Bangkok, Thailand. IEEE, 2013, p.503-506. DOI: <a href="https://doi.org/10.1109/ISMS.2013.26">https://doi.org/10.1109/ISMS.2013.26
+AJRA, H.; HASAN, Mohamad Z.; ISLAM, Md.S. BER analysis of various channel equalization schemes of a QO-STBC encoded OFDM based MIMO CDMA system. <em>Int. J. Computer Network and Information Security</em>, v.6, n.3, p.30-36, 2014. DOI: <a href="https://doi.org/10.5815/ijcnis.2014.03.04">https://doi.org/10.5815/ijcnis.2014.03.04</a>.</p><p>
+AJRA, H.; HASAN, Mohamad Z.; ISLAM, Md.S. BER analysis of various channel equalization schemes of a QO-STBC encoded OFDM based MIMO CDMA system. <em>Int. J. Computer Network and Information Security</em>, v.6, n.3, p.30-36, 2014. DOI: <a href="https://doi.org/10.5815/ijcnis.2014.03.04">https://doi.org/10.5815/ijcnis.2014.03.04
+SENTHILKUMAR, G.; AMUTHA, R. Capacity enhancement of MCCDMA systems through MAI cancellation using switched interleaving technique and correlation reconstruction based MRC with diversity gain. <em>Int. J. Soft Comput. Eng.</em>, v.4, n.1, p.83-87, 2014.</p><p>EL SHAREF, Semi; KHEDR, Mohamed; BADRAN, Ehab F. Enhancing MC-CDMA system using rotated quasi-orthogonal STBC in wireless channels
+null
+null
+null
+null
+null
+null
+null
+IEEE Wireless Advanced Conf.</em>, 25-27 June 2012, London, UK. IEEE, 2012, p.110-114. DOI: <a href="https://doi.org/10.1109/WiAd.2012.6296544">https://doi.org/10.1109/WiAd.2012.6296544
+null
+null
+GLISIC, Savo G. <em>Advanced Wireless Communications: 4G Technologies</em>. Chichester, England: John Wiley and Sons Ltd., 2005.</p><p>CAI, Yunlong; DE LAMARE, Rodrigo C.; LE RUYET, Didier. Transmit processing techniques based on switched interleaving and limited feedback for interference mitigation in multiantenna MC-CDMA systems
+null
+null
+Vehicular Technol.
+60, n.4, p.1559-1570, 2011. DOI: <a href="https://doi.org/10.1109/TVT.2011.2109744">https://doi.org/10.1109/TVT.2011.2109744
+36">https://doi.org/10.3103/S0735272717110036
+Interference mitigation in uplink STBC MC-CDMA system based on PIC receiver

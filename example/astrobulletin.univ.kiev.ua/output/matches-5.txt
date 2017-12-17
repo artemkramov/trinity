@@ -1,0 +1,15 @@
+﻿﻿<body class="post-template-default single single-post postid-465
+niv.kiev.ua/en/54_alexandrov
+4_alexandrov
+465" class="post-465 post type-post status-publish format-standard hentry category-number_54
+4, c. 41-46 (2016
+"><strong><span style="color: #333399;">ЧАСОВА ЗАТРИМКА КРИТИЧНИХ ЗОБРАЖЕНЬ В ОКОЛІ КАСПОВОЇ </span></strong></span><span style="font-size: 18pt;"><strong><span style="color: #333399;">ТОЧКИ ГРАВІТАЦІЙНО-ЛІНЗОВОЇ СИСТЕМИ</span>
+ style="text-align: justify;"><strong>О. Александров</strong>, канд. фіз.-мат. наук, старш. наук. співроб.<br/><strong>В. Жданов</strong>, д-р фіз.-мат. наук, проф.<br/>Астрономічна обсерваторія Київського національного університету імені Тараса Шевченка<br/><span id="more-465"></span><br/
+br/></strong>Отримано наближені формули для часової затримки критичних зображень точкового джерела, що знаходиться <span style="line-height: 1.5;">поблизу каспової точки каустики. Ми обговорюємо формули нульового, першого і другого порядків за степенями па</span><span style="line-height: 1.5;">раметра, який задає близькість джерела до каустики. Ці формули пов&#8217;язують час затримки з характеристиками лін</span><span style="line-height: 1.5;">зового потенціалу. Формула нульового наближення була отримана в роботі Конгдона, Кітона і Нордгрена (MNRAS, </span><span style="line-height: 1.5;">2008). Для загального потенціалу ми знайшли до неї поправку першого порядку. У випадку потенціалу, симетричного </span><span style="line-height: 1.5;">відносно осі каспу, ця поправка тотожно дорівнює нулю. Для цього випадку ми отримали поправку другого порядку. </span><span style="line-height: 1.5;">Знайдені співвідношення проілюстровані на простому модельному прикладі.</span></p><p style="text-align: justify;"
+br/></strong>Гравітаційно-лінзові системи</p><p style="text-align: justify;"
+4/Astronomy_54_41-46.pdf">Full text PDF</a></p><p style="text-align: justify;"
+6.54.41-46">https://doi.org/10.17721/BTSNUA.2016.54.41
+-46
+4_parnovsky1
+4_Parnovsky1
+4_baran/" rel="next">54_Baran

@@ -1,0 +1,1 @@
+﻿\Q﻿<html><head><title>Results</title></head><body><h1>Results:</h1>\E(.+)\Q<br/><b>\E(.+)\Q</b><br/>$\E(((.+)\Q<br/><br/>\E(.+)\Q<br/><b>\E(.+))?\Q</b><br/>$\E)*(.+)\Q<br/></body></html>\E
