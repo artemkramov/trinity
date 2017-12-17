@@ -1,0 +1,11 @@
+﻿202e642e897eb93b30f617f74c326c75" name="a202e642e897eb93b30f617f74c326c75" enctype="multipart/form-data" method="post" target="_self" onsubmit="return validateForm('a202e642e897eb93b30f617f74c326c75
+556:pages:1556
+556" target="_self">2017-1-5
+964
+7. — Vol. 19, N 1
+40–49
+Methodics of data preprocessing in problem of sequential analysis.
+Moldavskaya A.V., Ruvinskaya V.M. 
+A data preprocessing technique for sequential analysis is described. It is outlined and experimentally demonstrated the problems of this field of data mining: noisy data, alphabet redundancy, eventual presence of cyclic repeats. It is proposed the solution of these problems, effectivity of which is shown experimentally. Tabl.: 6. Refs: 14 titles.
+data mining, data preprocessing, sequential pattern mining, patterns, sequences
+7/1/1-5.pdf">2017-1-5

@@ -1,0 +1,26 @@
+﻿Game theoretic modeling of AIMD network equilibrium
+26370">Проблеми програмування, 2016
+26371">Проблеми програмування, 2016, № 1
+Game theoretic modeling of AIMD network equilibrium
+Ignatenkо, O.P.&amp;type=author&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;">Ignatenkо, O.P
+Теоретико-игровое моделирование равновесия в AIMD сетях<br/>Теоретико-ігрове моделювання рівноваги у AIMD мережах
+Математичне моделювання об’єктів та процесів
+004.7
+26383">http://dspace.nbuv.gov.ua/handle/123456789/126383
+Game theoretic modeling of AIMD network equilibrium / O.P. Ignatenkо // Проблеми програмування. — 2016. — № 1. — С. 116-128. — Бібліогр.: 17 назв. — анг
+6
+26
+19
+Game theoretic modeling of AIMD network equilibrium">Game theoretic modeling of AIMD network equilibrium
+<div class="spacer"></div>This paper deals with modeling of network’s dynamic using game theory approach. The process of interaction among players (network users), trying to maximize their payoffs (e.g. throughput) could be analyzed using game-based concepts (Nash equilibrium, Pareto efficiency, evolution stability etc.). In this work we presented the model of TCP network’s dynamic and proved existence and uniqueness of solution, formulated payoff matrix for a network game and found conditions of equilibrium existence depending of loss sensitivity parameter. We consider influence if denial of service attacks on the equilibrium characteristics and illustrate results by simulations.<div class="spacer"></div>В данной работе исследуется моделирования динамики сети на основе теоретико-игрового подхода. Процесс взаимодействия между пользоватлями, которые пытаются максимизировать свои выигрыши (например, долю сети) допускает представление в форме игры и применение методов анализа равновесия. В работе предлагается модель TCP сети и доказано существование и единственность точки устойчивого распределения ресурсов, построена матрица сетевой игры и найдены условия существования равновесия в зависимости от чувствительности пользователей к наличию ошибок. Рассмотрены также влияние атак на характеристики равновесия и проведено имитационное моделирование.<div class="spacer"></div>В даній роботі досліджується моделювання динаміки мережі на основі теоретико-ігрового підходу. Процес взаємодії між користувачами, що намагаються максимізувати свої виграші (наприклад, частку мережі) допускає представлення у формі гри та застосування методів аналізу рівноваги. В роботі пропонується модель TCP мережі та доведено існування і єдність точки стійкого розподілу ресурсів, побудована матриця мережевої гри та знайдені умови існування рівноваги в залежності від чутливості користувачів до наявності помилок. Розглянуто також вплив атак на характеристики рівноваги та проведене імітаційне моделювання.<div class="spacer"></div>
+26383
+e/123456789/126383/09-Ignatenko
+09-Ignatenko.pdf">09-Ignatenko
+610.7К
+26383/09-Ignatenko
+26371">Проблеми програмування, 2016, № 1</a> [11
+26371
+26371
+26371
+26371
+26371

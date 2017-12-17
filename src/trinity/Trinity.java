@@ -26,14 +26,14 @@ public class Trinity {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        String siteName = "essuir.sumdu.edu.ua";
+        String siteName = "www.ipri.kiev.ua";
         String folderPath = String.format("./example/%s/", siteName);
          String outputFolderPath = folderPath + "/output/";
         ArrayList<String> documents = readFiles(folderPath + "/input/");
         TrinityTree tree = new TrinityTree();
         tree.setDocuments(documents);
         tree.buildTree(15, 600);
-//        tree.traverseForPrint();
+        tree.traverseForPrint();
         String template = tree.learnTemplate();
 //        
         

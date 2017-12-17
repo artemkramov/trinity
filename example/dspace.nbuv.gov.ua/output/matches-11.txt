@@ -1,0 +1,26 @@
+﻿Аналітичний огляд методів і засобів інформаційного пошуку в Semantic Web
+26370">Проблеми програмування, 2016
+26371">Проблеми програмування, 2016, № 1
+Аналітичний огляд методів і засобів інформаційного пошуку в Semantic Web
+Гришанова, І.Ю.&amp;type=author&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;">Гришанова, І.Ю
+Аналитический обзор методов и средств информационного поиска в Semantic Web<br/>Analytical review on information retrieval methods and applications in the Semantic Web
+Моделі та засоби систем баз даних і знань
+681.3
+26379">http://dspace.nbuv.gov.ua/handle/123456789/126379
+Аналітичний огляд методів і засобів інформаційного пошуку в Semantic Web / І.Ю. Гришанова // Проблеми програмування. — 2016. — № 1. — С. 51-72. — Бібліогр.: 29 назв. — укр
+6
+24
+16
+Аналітичний огляд методів і засобів інформаційного пошуку в Semantic Web">Аналітичний огляд методів і засобів інформаційного пошуку в Semantic Web
+<div class="spacer"></div>В статті надаються та аналізуються методи і засоби інформаційного пошуку в середовищі Semantic Web. Надаються базові поняття інформаційного пошуку, задачі, моделі та класифікація систем інформаційного пошуку за різними ознаками. Наводяться приклади існуючих сучасних пошукових систем, а також надається перелік ознак 3-х поколінь пошукових систем. Запропонована модель інформаційного пошуку в новому середовищі Semantic Web та Web речей розширює класифікацію пошукових систем та модель пошуку з урахуванням можливості пошуку нових об`єктів, доступних по інтернету, та використання знань, що подані в Semantic Web.<div class="spacer"></div>В статье изложены и проанализированы методы и средства информационного поиска в среде Semantic Web. Представлены базовые понятия информационного поиска, задачи, модели и классификация систем информационного поиска по различным признакам. Приведены примеры существующих современных поисковых систем, а также выделены этапы развития и перечислен перечень функциональных и архитектурных признаков 3-х поколений поисковых систем. Предложенная модель информационного поиска для новой среды Semantic Web и Web вещей расширяет классификацию поисковых систем и модель поиска с учетом возможности поиска новых обьектов, которые стали доступными в Web, и использования знаний, представленных в Semantic Web.<div class="spacer"></div>The article describes and analyzes the Information Retrieval (IR) methods and applications in the environment of Semantic Web. The author provided the basic Information Retrieval concepts, problems, models and classification of IR systems on various grounds. Examples of existing modern search engines, as well as highlighted the stages of development and listed a list of functional and architectural features of 3-rd search engines generation. The proposed model of IR extends the classification of search engines and search model with the possibility of finding new objects that have become available in the web, and use knowledge represented in the Semantic Web.<div class="spacer"></div>
+26379
+e/123456789/126379/05-Grishanova
+05-Grishanova.pdf">05-Grishanova
+783.0К
+26379/05-Grishanova
+26371">Проблеми програмування, 2016, № 1</a> [11
+26371
+26371
+26371
+26371
+26371

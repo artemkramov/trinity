@@ -1,0 +1,11 @@
+﻿8f78c0b90373e817f9aba978d92281a6" name="a8f78c0b90373e817f9aba978d92281a6" enctype="multipart/form-data" method="post" target="_self" onsubmit="return validateForm('a8f78c0b90373e817f9aba978d92281a6
+481:pages:1481
+481" target="_self">2016-2-4
+832
+6. — Vol. 18, N 2
+31–39
+Protection of information objects from intentional collisions of inspection characteristics in error-correcting codes 
+ Mаtоv О.Y., Vаsylenko V.S. 
+For error-correcting codes, it is introduced the concept of the integrity of the signs of collisions and showed that their presence leads to the recipient before the message undetected, often deliberate modification, and therefore may have serious consequences. Ways minimizing the number of collisions signs of integrity are demonstrated. Tabl.: 2. Refs: 6 titles.
+noise-proof codes, information security, information objects, signs of conflict integrity, integrity
+6/2/2-4.pdf">2-4
