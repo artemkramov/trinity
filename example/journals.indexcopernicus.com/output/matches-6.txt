@@ -1,0 +1,36 @@
+﻿47471">European Journal of Geopolitics
+136244&amp;journalId=47471"> 2016; 4 
+Ongoing conflicts in the Middle East and their impact o…
+130869" class="xfichecover2 ng-scope" src="api/file/viewByFileId/130869
+47471
+European Journal of Geopolitics
+2353-8554
+==null" class="ng-scope"><span class="xttnd ng-binding" tooltip-placement="right" tooltip="Отсутствие данных">О/д</span>
+PL
+EN
+Polskie Towarzystwo Geopolityczne
+==null" class="pull-right ng-scope"><strong>N/A
+!=2016" class="bg-success-rate p-xs b-r-xs ng-scope"> MNISW 2016:<span class="pull-right xtooltip text-bold text-uppercase ng-binding" tooltip-placement="bottom" tooltip="Не относится">n/d
+89.8
+==null" class="pull-right xtooltip text-bold text-uppercase ng-scope" tooltip-placement="top" tooltip="Неиндексированные в Journals Master List
+n/i
+null
+null
+Ongoing conflicts in the Middle East and their impact on Europe
+Anton FOGAŠ
+null
+null
+null
+</sup></nobr></span><span ng-repeat="author in article.authors" class="ng-scope"><nobr class="ng-binding">Viktor Verba<sup class="ng-binding"> 2
+</sup></nobr></span><span ng-repeat="author in article.authors" class="ng-scope"><nobr class="ng-binding">Viktor Verba<sup class="ng-binding"> 2
+repeat="afiliation in afiliations" class="ng-binding ng-scope"> 1. University of Prešov Faculty of Humanities and Natural Sciences Department of Geography and Regional Development , <br ng-if="$index + 1 !=afiliations.length" class="ng-scope"></span><span ng-repeat="afiliation in afiliations" class="ng-binding ng-scope"> 2. University of Prešov Department of Geography and Regional Development 
+<span ng-if="!journal.titleShort" class="ng-binding ng-scope">European Journal of Geopolitics</span> 2016; 4 <span ng-if="article.pageFromTo==null &amp;&amp; article.pageFrom!=null &amp;&amp; article.pageTo!=null" class="ng-binding ng-scope">: 51-67;
+EN
+The Middle East is a region that significantly affects worldevents. A relatively hopeful period in the form of revolutionary waveof the Arab Spring, from North Africa to Gulf countries has been“drowned” in a return to “business as usual”. The political situationhas escalated to the extent possible in many countries of the regionand has grown up into open military conflicts and terrorist activities ofindividuals or smaller groups. A number of hotbeds of tension ispresent in the region now - Syria, Iraq, Palestine and Afghanistan in abroader context. The most complicated situation is on the borderbetween Syria and Iraq, where followers of radical Islamist terroristorganization of Islamic State has created a state of the same name onits conquered territories. Events that take place in this space greatlyaffect not only immediate contact regions of Europe but also moredistant areas. Central Europe and Slovakia is no exception. “Export” ofIslamic fundamentalism in Europe and extension of activities of Islamicstate in the form of terrorist attacks and the recruitment of volunteersleft no doubt that Europe and the world are facing very toughopponent. Conflicts taking place in this region have an impact onEurope in the secondary form too. Tens of thousands of migrants whocome mainly from Syria and Iraq are trying to leave their homes due tomilitary events and persecution and to save their lives by fleeing and asubsequent immigration in the developed countries of Central andWestern Europe. This rampant process has caused conflicts within theEU and “stripped” different positions of individual countriesdiametrically
+((article.pdfUrl !=null || article.pdf !=null) &amp;&amp; article.free !=false)
+Pełna treść</h5></div><div class="ibox-content"><a ng-if="article.pdf !=null" ng-href="/api/file/viewByFileId/131252.pdf" target="_blank" class="btn btn-primary ng-binding ng-scope" href="/api/file/viewByFileId/131252.pdf"> Pobierz</a></div></div><div class="ibox ng-scope" ng-if="article.keywords"><div class="ibox-title"><h5 class="ng-binding">Ключевые слова
+null
+null
+null
+ ng-binding">Middle East, Islamic State, Europe, Conflicts
+/ol><p ng-if="(references.length==0 || !references) &amp;&amp; !loadingReferences" class="xnodata ng-binding ng-scope" style="">Отсутствие данных</p

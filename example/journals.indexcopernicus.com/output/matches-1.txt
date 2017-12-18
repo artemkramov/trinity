@@ -1,0 +1,36 @@
+﻿368">Journal of Achievements in Materials and Manufacturing …
+142486&amp;journalId=368"> 2017; 2<span ng-if="issue.number !=null" class="ng-binding ng-scope" style=""> (83)</span>
+Localization of component lead insidea THT solder join…
+122600" class="xfichecover2 ng-scope" src="api/file/viewByFileId/122600
+368
+Journal of Achievements in Materials and Manufacturing Engineering
+1734-8412
+ !=null" class="ng-binding ng-scope">71.0000.1500.2388
+PL
+EN
+International OCSCO World Press
+ !=null" class="pull-right ng-scope" style=""><strong class="ng-binding">5
+==2016" class="bg-success-rate p-xs b-r-xs ng-binding ng-scope" style=""> MNISW B:<span class="pull-right"><strong class="ng-binding">12</strong>
+90.58
+ !=null" class="pull-right ng-scope" style="
+90.65
+null
+null
+Localization of component lead insidea THT solder joint for solder defectsclassification
+C.L.S.C. Fonseka<sup class="ng-binding"> 1</sup></nobr></span><span ng-repeat="author in article.authors" class="ng-scope"><nobr class="ng-binding">J.A.K.S. Jayasinghe
+null
+null
+null
+null
+null
+repeat="afiliation in afiliations" class="ng-binding ng-scope"> 1. Department of Electronics &amp; Telecommunication, University of Moratuwa, Moratuwa 10400, Sri Lanka 
+<span ng-if="!journal.titleShort" class="ng-binding ng-scope">Journal of Achievements in Materials and Manufacturing Engineering</span> 2017; 2<span ng-if="issue.number" class="ng-binding ng-scope"> (83)</span><span ng-if="article.pageFromTo==null &amp;&amp; article.pageFrom!=null &amp;&amp; article.pageTo!=null" class="ng-binding ng-scope">: 57-66;
+en
+Purpose: Automatic Optical Inspection (AOI) systems, used in electronics industry havebeen primarily developed to inspect soldering defects of Surface Mount Devices (SMD) ona Printed Circuit Board (PCB). However, no commercially available AOI system exists thatcan be integrated to a desktop soldering robotic system, which is capable of identifyingsoldering defects of Through Hole Technology (THT) solder joints along with the solderingprocess. In our research, we have implemented an AOI platform that is capable of performingautomatic quality assurance of THT solder joints in a much efficient way. In this paper, wehave presented a novel approach to identify soldering defects of THT solder joints, based onthe location of THT component lead top. This paper presents the methodologies that can beused to precisely identify and localize THT component lead inside a solder joint.Design/methodology/approach: We have discussed the importance of lead toplocalization and presented a detailed description on the methodologies that can be usedto precisely segment and localize THT lead top inside the solder joint.Findings: It could be observed that the precise localization of THT lead top makes thesoldering quality assurance process more accurate. A combination of template matchingalgorithms and colour model transformation provide the most accurate outcome in localizingthe component lead top inside solder joint, according to the analysis carried out in this paper.Research limitations/implications: When the component lead top is fully coveredby the soldering, the implemented methodologies will not be able to identify the actuallocation of it. In such a case, if the segmented and detected lead top locations aredifferent, a decision is made based on the direction in which the solder iron tip touchesthe solder pad.Practical implications: The methodologies presented in this paper can be effectivelyused to have a precise localization of component lead top inside the solder joint. Theprecise identification of component lead top leads to have a very precise quality assurancecapability to the implemented AOI system.Originality/value: This research proposes a novel approach to identify soldering defectsof THT solder joints in a much efficient way based on the component lead top. The value ofthis paper is quite high, since we have taken all the possibilities that may appear on a solderjoint in a practical environment.
+((article.pdfUrl !=null || article.pdf !=null) &amp;&amp; article.free !=false)
+Pełna treść</h5></div><div class="ibox-content"><a ng-if="article.pdfUrl !=null" ng-href="http://31.186.81.235:8080/api/files/view/230254.pdf" target="_blank" class="btn btn-primary ng-binding ng-scope" href="http://31.186.81.235:8080/api/files/view/230254.pdf"> Pobierz</a></div></div><div class="ibox ng-scope" ng-if="article.keywords"><div class="ibox-title"><h5 class="ng-binding">Ключевые слова
+null
+null
+null
+ ng-binding">Automatic Optical Inspection, SIFT, SURF, FAST, K-Means clustering, Contour finding, HSV, HSL, RGI
+/ol><p ng-if="(references.length==0 || !references) &amp;&amp; !loadingReferences" class="xnodata ng-binding ng-scope" style="">Отсутствие данных</p

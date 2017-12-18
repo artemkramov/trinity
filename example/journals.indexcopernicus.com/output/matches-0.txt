@@ -1,0 +1,36 @@
+﻿47501">VITRUVIO - International Journal of Architectural Techn…
+136534&amp;journalId=47501"> 2017; 2<span ng-if="issue.number !=null" class="ng-binding ng-scope" style=""> (1)</span>
+Architectural practice and theory: the case of Bruno Ta…
+132725" class="xfichecover2 ng-scope" src="api/file/viewByFileId/132725
+47501
+VITRUVIO - International Journal of Architectural Technology and Sustainability
+2444-9091
+==null" class="ng-scope"><span class="xttnd ng-binding" tooltip-placement="right" tooltip="Отсутствие данных">О/д</span>
+ES
+EN
+Universitat Politècnica de València
+==null" class="pull-right ng-scope"><strong>N/A
+!=2016" class="bg-success-rate p-xs b-r-xs ng-scope"> MNISW 2016:<span class="pull-right xtooltip text-bold text-uppercase ng-binding" tooltip-placement="bottom" tooltip="Не относится">n/d
+91.13
+==null" class="pull-right xtooltip text-bold text-uppercase ng-scope" tooltip-placement="top" tooltip="Неиндексированные в Journals Master List
+n/i
+><div class="ibox-content ng-scope" ng-if="(article.pdf==null &amp;&amp; article.pdfUrl==null) || ((article.pdfUrl !=null || article.pdf!=null) &amp;&amp; article.free==false)"><p translate="JOURNAL_ART.HEADER_CONTACT_FORM" translate-compile="" class="ng-scope"><span class="ng-scope">Если вы хотите получить доступ к полному тексту научной статьи, </span><a ui-sref="search.contactform({journalId: journal.id, type: 'ARTICLE_FULLTEXT_WITH_REP', articleId: article.id})" class="ng-scope" href="/search/contact-form/ARTICLE_FULLTEXT_WITH_REP/47501/1502147">то обратитесь</a><span class="ng-scope"> к представителю журнала.</span></p></div
+><div class="ibox-content ng-scope" ng-if="(article.pdf==null &amp;&amp; article.pdfUrl==null) || ((article.pdfUrl !=null || article.pdf!=null) &amp;&amp; article.free==false)"><p translate="JOURNAL_ART.HEADER_CONTACT_FORM" translate-compile="" class="ng-scope"><span class="ng-scope">Если вы хотите получить доступ к полному тексту научной статьи, </span><a ui-sref="search.contactform({journalId: journal.id, type: 'ARTICLE_FULLTEXT_WITH_REP', articleId: article.id})" class="ng-scope" href="/search/contact-form/ARTICLE_FULLTEXT_WITH_REP/47501/1502147">то обратитесь</a><span class="ng-scope"> к представителю журнала.</span></p></div
+Architectural practice and theory: the case of Bruno Taut's house in Berlin-Dahlewitz
+Paola Ardizzola
+null
+null
+null
+null
+null
+repeat="afiliation in afiliations" class="ng-binding ng-scope"> 1. Antalya International University 
+ VITRUVIO Journal 2017; 2<span ng-if="issue.number" class="ng-binding ng-scope"> (1)</span><span ng-if="article.pageFromTo==null &amp;&amp; article.pageFrom!=null &amp;&amp; article.pageTo!=null" class="ng-binding ng-scope">: 45-56;</span><span ng-if="article.doi!=null" class="ng-binding ng-scope"> 10.4995/vitruvio-ijats.2017.7496; 
+EN
+In 1926 Bruno Taut built his own house in Berlin-Dahlewitz. The German architect had already declared his ideas of housing in the book Die neue Whonung (1924) exemplifying the new concept of modern living-style, according to Neues Bauen. In other theoretical writings he defines the Neues Bauen in relation with new needs, tendencies and aesthetics of architecture, referring to important issues as climate, topography and tradition. The book Ein Whonhaus (1927) stigmatizes the coeval construction process of his house: the thirteen chapters are a detailed analysis which give evidence to every technological and morphological choice. Taut focuses on the relationship between architecture and landscape, type of furniture, functional plan layout, use of glass; especially he enlightens the reader as to the use of colour as a construction material. The house has an unconventional shape, it is a quarter of a circle; in his writings the architect painstakingly explains the impressive plan. With the book Ein Whonhaus Taut delivers to memory his home design, transforming process and ideas related to the modern house. He breaks through conventions and changes the notions of what Modernism could produce. The paper highlights the theoretical production related to the architect’s own house as praxis for doing architecture, emphasizing Taut’s contribution to a dialectic mutual relationship between theoretical and architectural practice, in order to achieve a more conscious and effective design process.
+article.keywords
+Ключевые слова
+null
+null
+null
+ ng-binding">Neues Bauen; Modernism; theoretical writings; praxis process; colour
+/ol><p ng-if="(references.length==0 || !references) &amp;&amp; !loadingReferences" class="xnodata ng-binding ng-scope" style="">Отсутствие данных</p

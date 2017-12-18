@@ -1,0 +1,36 @@
+﻿47471">European Journal of Geopolitics
+136226&amp;journalId=47471"> 2015; 3 
+Geostrategic position of Slovakia (selected issues)
+130869" class="xfichecover2 ng-scope" src="api/file/viewByFileId/130869
+47471
+European Journal of Geopolitics
+2353-8554
+==null" class="ng-scope"><span class="xttnd ng-binding" tooltip-placement="right" tooltip="Отсутствие данных">О/д</span>
+PL
+EN
+Polskie Towarzystwo Geopolityczne
+==null" class="pull-right ng-scope"><strong>N/A
+!=2016" class="bg-success-rate p-xs b-r-xs ng-scope"> MNISW 2016:<span class="pull-right xtooltip text-bold text-uppercase ng-binding" tooltip-placement="bottom" tooltip="Не относится">n/d
+89.8
+==null" class="pull-right xtooltip text-bold text-uppercase ng-scope" tooltip-placement="top" tooltip="Неиндексированные в Journals Master List
+n/i
+null
+null
+Geostrategic position of Slovakia (selected issues)
+Robert IŠTOK<sup class="ng-binding"> 1</sup></nobr></span><span ng-repeat="author in article.authors" class="ng-scope"><nobr class="ng-binding">Dominika PLAVČANOVÁ
+null
+null
+null
+null
+null
+repeat="afiliation in afiliations" class="ng-binding ng-scope"> 1. University of Prešov Department of Geography and Applied Geoinformatics 
+<span ng-if="!journal.titleShort" class="ng-binding ng-scope">European Journal of Geopolitics</span> 2015; 3 <span ng-if="article.pageFromTo==null &amp;&amp; article.pageFrom!=null &amp;&amp; article.pageTo!=null" class="ng-binding ng-scope">: 4-20;
+EN
+Geostrategic analyses of position of the state are focused onevaluation of its location and geographic, demographic, economic andmilitary attributes in geopolitical context, mainly in the comparisonwith neighbouring countries. From the small and middle state’s pointof view are those analysis linked with their foreign policy orientationand at the same time they contribute to its national interestsformulation. Submitted analysis presents the position of SlovakRepublic in the Central-European space and points to selectedgeostrategic specifics in relation with neighbouring countries, as wellas to broader geopolitical space. It also briefly analyse geopoliticalcontexts of Slovakia’s integration process with western structures
+((article.pdfUrl !=null || article.pdf !=null) &amp;&amp; article.free !=false)
+Pełna treść</h5></div><div class="ibox-content"><a ng-if="article.pdf !=null" ng-href="/api/file/viewByFileId/130922.pdf" target="_blank" class="btn btn-primary ng-binding ng-scope" href="/api/file/viewByFileId/130922.pdf"> Pobierz</a></div></div><div class="ibox ng-scope" ng-if="article.keywords"><div class="ibox-title"><h5 class="ng-binding">Ключевые слова
+null
+null
+null
+ ng-binding">geostrategy, geopolitics, Slovakia
+/ol><p ng-if="(references.length==0 || !references) &amp;&amp; !loadingReferences" class="xnodata ng-binding ng-scope" style="">Отсутствие данных</p

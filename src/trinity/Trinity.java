@@ -26,17 +26,15 @@ public class Trinity {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        String siteName = "www.ipri.kiev.ua";
+        String siteName = "journals.indexcopernicus.com";
         String folderPath = String.format("./example/%s/", siteName);
          String outputFolderPath = folderPath + "/output/";
         ArrayList<String> documents = readFiles(folderPath + "/input/");
         TrinityTree tree = new TrinityTree();
         tree.setDocuments(documents);
         tree.buildTree(15, 600);
-        tree.traverseForPrint();
+//        tree.traverseForPrint();
         String template = tree.learnTemplate();
-//        
-        
         writeFile(outputFolderPath + "pattern.txt", template);
 //        String template = readFile(outputFolderPath + "pattern.txt");
         Pattern TAG_REGEX = Pattern.compile(template);
