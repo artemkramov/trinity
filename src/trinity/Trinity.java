@@ -27,40 +27,37 @@ public class Trinity {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        String siteName = "www.ipri.kiev.ua";
-        String folderPath = String.format("./example/%s/", siteName);
-         String outputFolderPath = folderPath + "/output/";
-        ArrayList<String> documents = readFiles(folderPath + "/input/");
+        String siteName = "ipri.kiev.ua";
+        String folderPath = String.format("../Spider/result/%s/", siteName);
+        String outputFolderPath = folderPath + "/output/";
+        File inputDirectory = new File(folderPath + "/input/");
+        ArrayList<String> fileNamesForPattern = getDocumentsForPattern(inputDirectory);
+        ArrayList<String> documents = readFiles(fileNamesForPattern);
         TrinityTree tree = new TrinityTree();
         tree.setDocuments(documents);
         tree.buildTree(15, 600);
-        tree.traverseForPrint();
+//        tree.traverseForPrint();
         String template = tree.learnTemplate();
         writeFile(outputFolderPath + "pattern.txt", template);
-//        String template = readFile(outputFolderPath + "pattern.txt");
         Pattern TAG_REGEX = Pattern.compile(template);
         documents = new ArrayList<>();
-        documents.add(readFile(folderPath + "/input/test1.txt"));
-        documents.add(readFile(folderPath + "/input/test2.txt"));
-        documents.add(readFile(folderPath + "/input/test3.txt"));
-        documents.add(readFile(folderPath + "/input/test4.txt"));
-        documents.add(readFile(folderPath + "/input/test5.txt"));
-        documents.add(readFile(folderPath + "/input/test6.txt"));
-        documents.add(readFile(folderPath + "/input/test7.txt"));
-        documents.add(readFile(folderPath + "/input/test8.txt"));
-        documents.add(readFile(folderPath + "/input/test9.txt"));
-        documents.add(readFile(folderPath + "/input/test10.txt"));
-        documents.add(readFile(folderPath + "/input/test11.txt"));
-        documents.add(readFile(folderPath + "/input/test12.txt"));
-        documents.add(readFile(folderPath + "/input/test13.txt"));
-        documents.add(readFile(folderPath + "/input/test14.txt"));
-        documents.add(readFile(folderPath + "/input/test15.txt"));
-        documents.add(readFile(folderPath + "/input/test16.txt"));
+        int testSize = inputDirectory.listFiles().length;
+        Parser parser = new Parser();
+        for (final File fileEntry : inputDirectory.listFiles()) {
+            if (!fileEntry.isDirectory()) {
+                documents.add(readFile(fileEntry.getAbsolutePath()));
+            }
+            testSize--;
+            if (testSize == 0) {
+                break;
+            }
+        }
+        
         for (int i = 0; i < documents.size(); i++) {
             ArrayList<String> tags = new ArrayList<>();
+            ArrayList<String> tagsParser = parser.fetchData(siteName, documents.get(i));
             Matcher matcher = TAG_REGEX.matcher(documents.get(i));
             while (matcher.find()) {
-                int a = matcher.groupCount();
                 for (int j = 1; j <= matcher.groupCount(); j++) {
                     tags.add(matcher.group(j));
                 }
@@ -68,24 +65,28 @@ public class Trinity {
             System.gc();
             // Remove duplicates
             tags = new ArrayList<>(new LinkedHashSet<>(tags));
-            writeMatches(tags, String.format("%s/matches-%d.txt", outputFolderPath, i));
+//            writeMatches(tags, String.format("%s/matches-%d.txt", outputFolderPath, i));
+            writeMatchesToDB(tags, tagsParser);
         }
     }
 
-    public static ArrayList<String> readFiles(String folderPath) {
+    public static ArrayList<String> readFiles(ArrayList<String> fileNames) {
         ArrayList<String> list = new ArrayList<>();
-        list.add(readFile(folderPath + "input1.txt"));
-        list.add(readFile(folderPath + "input2.txt"));
-        list.add(readFile(folderPath + "input3.txt"));
-        list.add(readFile(folderPath + "input4.txt"));
-        list.add(readFile(folderPath + "input5.txt"));
-        list.add(readFile(folderPath + "input6.txt"));
-        list.add(readFile(folderPath + "input7.txt"));
-        list.add(readFile(folderPath + "input8.txt"));
-        list.add(readFile(folderPath + "input9.txt"));
-        list.add(readFile(folderPath + "input10.txt"));
-        list.add(readFile(folderPath + "input11.txt"));
+        fileNames.forEach((fileName) -> {
+            list.add(readFile(fileName));
+        });
         return list;
+    }
+
+    public static ArrayList<String> getDocumentsForPattern(File directory) {
+        ArrayList<String> fileNames = new ArrayList<>();
+        int fileCount = directory.list().length;
+        int chunk = (int)(fileCount / 20);
+        for (int i = 1; i < fileCount; i += chunk) {
+            String fileName = Integer.toString(i) + ".txt";
+            fileNames.add(directory.getPath() + "/" + fileName);
+        }
+        return fileNames;
     }
 
     public static String readFile(String filePath) {
@@ -98,8 +99,6 @@ public class Trinity {
             }
             in.close();
         } catch (IOException e) {
-            String t = e.getMessage();
-            int a = 3;
         }
         String content = contentBuilder.toString().replaceAll(">\\s+<", "><");
         return content;
@@ -122,6 +121,19 @@ public class Trinity {
             listString += match + "\r\n";
         }
         writeFile(folderPath, listString);
+    }
+    
+    public static void writeMatchesToDB(ArrayList<String> matches, ArrayList<String> dataParser) {
+        ArrayList<String> data = new ArrayList<>();
+        DBClient client = new DBClient();
+        if (matches.size() > 10 && dataParser.size() > 0) {
+            data.add(matches.get(4));
+            data.add(matches.get(5));
+            data.add(matches.get(6));
+            data.add(matches.get(7));
+            client.insertIPRI(data, dataParser);
+        }
+        
     }
 
 }
