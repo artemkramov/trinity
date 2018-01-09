@@ -1,11 +1,16 @@
 ﻿1f428d348792aed6f7c6c55f3c59f7b9" name="a1f428d348792aed6f7c6c55f3c59f7b9" enctype="multipart/form-data" method="post" target="_self" onsubmit="return validateForm('a1f428d348792aed6f7c6c55f3c59f7b9
-477:pages:1477
-477" target="_self">2016-2-2
-828
-6. — Vol. 18, N 2
+1477:pages:1477
+1477" target="_self">2016-2-2
+1828"></a><table bgcolor="#ffffff" cellpadding="3" cellspacing="1" width="100%
+class="TDC" bgcolor="#3B8BE4" valign="top" width="100
+amp; Processing. — 2016. — Vol. 18, N 2
 13–21
+doc.gif" alt="" width="50"/> PDF,DOC
+onclick="history.back()" value="<<back" type="button
 A study of efficiency usage of representations for functions of hyper-complex variable 
  Kalinovsky J.A., Boyarinova Y.E. 
-It is investigated the reduction of the amount of calculation when using representations for functions of hyper-complex variable such as exponent, trigonometric and hyperbolic ones as compared with their direct calculation utilizing the summation of infinite power series. Tabl.: 2. Refs: 14 titles.
-hyper-complex number system, the exponential function, trigonometric function, hyperbolic function, the amount of computation
+It is investigated the reduction of the amount of calculation when using representations for functions of hyper-complex variable such as exponent, trigonometric and hyperbolic ones as compared with their direct calculation utilizing the summation of infinite power series. Tabl.: 2. Refs: 14 titles.</td></tr><tr><td class="TDC" bgcolor="#3B8BE4" valign="top" width="100
+hyper-complex number system, the exponential function, trigonometric function, hyperbolic function, the amount of computation.</td></tr><tr><td class="TDC" bgcolor="#3B8BE4" valign="top" width="100
+null
+class="TDC" bgcolor="#3B8BE4" valign="top" width="100">File
 6/2/2-2.pdf">2-2

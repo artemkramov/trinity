@@ -331,7 +331,7 @@ public class TrinityTree {
                     counter++;
                 }
             }
-            if (counter > 0 && counter < this.documents.size() - 1) {
+            if (counter > 0 && counter < this.documents.size()) {
                 result = true;
             }
             return result;

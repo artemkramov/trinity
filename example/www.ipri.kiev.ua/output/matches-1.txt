@@ -1,11 +1,16 @@
 ﻿92c3f9bd77571fbe24eb2ea5da8f670d" name="a92c3f9bd77571fbe24eb2ea5da8f670d" enctype="multipart/form-data" method="post" target="_self" onsubmit="return validateForm('a92c3f9bd77571fbe24eb2ea5da8f670d
-554:pages:1554
-554" target="_self">2017-1-4
-962
-7. — Vol. 19, N 1
+1554:pages:1554
+1554" target="_self">2017-1-4
+1962"></a><table bgcolor="#ffffff" cellpadding="3" cellspacing="1" width="100%
+class="TDC" bgcolor="#3B8BE4" valign="top" width="100
+amp; Processing. — 2017. — Vol. 19, N 1
 34–39
+doc.gif" alt="" width="50"/> PDF,DOC
+onclick="history.back()" value="<<back" type="button
  Scientometric analysis of co-word networks taken from publications of a scientific team.
 Lande D.V., Balagura I.V., Pohorilyi S.D., Dubchak N.A. 
-The using of co-word networks for determining the priority scientific topics of research are suggested. It is proposed how to define terms that are the intersection of the networks of the co-authors of a scientific team and those common in the field of research in the abstract database. Testing the algorithm is presented on the example of the analysis of the term networks on scientific publications in physics in the Scopus database of the research team of the Kiev National University Taras Shevchenko. Fig.: 4. Refs: 6 titles.
-co-word networks, scientific team, abstract database, Scopus, priority scientific topics
+The using of co-word networks for determining the priority scientific topics of research are suggested. It is proposed how to define terms that are the intersection of the networks of the co-authors of a scientific team and those common in the field of research in the abstract database. Testing the algorithm is presented on the example of the analysis of the term networks on scientific publications in physics in the Scopus database of the research team of the Kiev National University Taras Shevchenko. Fig.: 4. Refs: 6 titles.</td></tr><tr><td class="TDC" bgcolor="#3B8BE4" valign="top" width="100
+co-word networks, scientific team, abstract database, Scopus, priority scientific topics.</td></tr><tr><td class="TDC" bgcolor="#3B8BE4" valign="top" width="100
+null
+class="TDC" bgcolor="#3B8BE4" valign="top" width="100">File
 7/1/1-4.pdf">2017-1-4

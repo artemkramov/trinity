@@ -13,6 +13,7 @@ import java.io.IOException;
 import java.io.OutputStreamWriter;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
+import java.util.LinkedHashSet;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -26,14 +27,14 @@ public class Trinity {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        String siteName = "journals.indexcopernicus.com";
+        String siteName = "www.ipri.kiev.ua";
         String folderPath = String.format("./example/%s/", siteName);
          String outputFolderPath = folderPath + "/output/";
         ArrayList<String> documents = readFiles(folderPath + "/input/");
         TrinityTree tree = new TrinityTree();
         tree.setDocuments(documents);
         tree.buildTree(15, 600);
-//        tree.traverseForPrint();
+        tree.traverseForPrint();
         String template = tree.learnTemplate();
         writeFile(outputFolderPath + "pattern.txt", template);
 //        String template = readFile(outputFolderPath + "pattern.txt");
@@ -51,6 +52,10 @@ public class Trinity {
         documents.add(readFile(folderPath + "/input/test10.txt"));
         documents.add(readFile(folderPath + "/input/test11.txt"));
         documents.add(readFile(folderPath + "/input/test12.txt"));
+        documents.add(readFile(folderPath + "/input/test13.txt"));
+        documents.add(readFile(folderPath + "/input/test14.txt"));
+        documents.add(readFile(folderPath + "/input/test15.txt"));
+        documents.add(readFile(folderPath + "/input/test16.txt"));
         for (int i = 0; i < documents.size(); i++) {
             ArrayList<String> tags = new ArrayList<>();
             Matcher matcher = TAG_REGEX.matcher(documents.get(i));
@@ -61,6 +66,8 @@ public class Trinity {
                 }
             }
             System.gc();
+            // Remove duplicates
+            tags = new ArrayList<>(new LinkedHashSet<>(tags));
             writeMatches(tags, String.format("%s/matches-%d.txt", outputFolderPath, i));
         }
     }
@@ -69,7 +76,7 @@ public class Trinity {
         ArrayList<String> list = new ArrayList<>();
         list.add(readFile(folderPath + "input1.txt"));
         list.add(readFile(folderPath + "input2.txt"));
-//        list.add(readFile(folderPath + "input3.txt"));
+        list.add(readFile(folderPath + "input3.txt"));
         list.add(readFile(folderPath + "input4.txt"));
         list.add(readFile(folderPath + "input5.txt"));
         list.add(readFile(folderPath + "input6.txt"));
@@ -77,6 +84,7 @@ public class Trinity {
         list.add(readFile(folderPath + "input8.txt"));
         list.add(readFile(folderPath + "input9.txt"));
         list.add(readFile(folderPath + "input10.txt"));
+        list.add(readFile(folderPath + "input11.txt"));
         return list;
     }
 

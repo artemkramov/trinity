@@ -1,0 +1,16 @@
+﻿b9418c8b6c5ef6b1185ee827319705f1" name="ab9418c8b6c5ef6b1185ee827319705f1" enctype="multipart/form-data" method="post" target="_self" onsubmit="return validateForm('ab9418c8b6c5ef6b1185ee827319705f1
+1189:pages:1189
+1189" target="_self">2013-1-8
+1437"></a><table bgcolor="#ffffff" cellpadding="3" cellspacing="1" width="100%
+class="TDC" bgcolor="#3B8BE4" valign="top" width="100
+amp; Processing. — 2013. — Vol. 15, N 1
+71-81
+doc.gif" alt="" width="50"/> PDF,DOC
+onclick="history.back()" value="<<back" type="button
+Modern Videoadapter Architectures. GPGPU Technology (Part 2) 
+Pogorilyy S.D, Vitel D.Yu, Vereshchynsky O.A. 
+General principles of a shared and distributed memory are described in detail for NVidia CUDA technology. Basic patterns of the thread interaction and globals synchronization problems are analyzed. A comparative analysis of the main GPGPU technologies — Nvidia CUDA, OpenCL, Direct Compute — has been provided. Tabl.: 3. Fig.: 3. Refs: 9 titles.</td></tr><tr><td class="TDC" bgcolor="#3B8BE4" valign="top" width="100
+General-purpose graphics processing units (GPGPU), NVidia Compute Unified Device Architecture (CUDA), DirectCompute, OpenCL, Single Instruction Multiple Data (SIMD), Single In¬struction Multiple Threads (SIMT), shaders, Message Passing Interface (MPI), hierarchical thread organi¬zation, synchronization model, memory model, heterogeneous distributed systems, dynamical parallelism, dynamical memory allocation, videoadapter architectures (Tesla, Fermi, Kepler).</td></tr><tr><td class="TDC" bgcolor="#3B8BE4" valign="top" width="100
+null
+class="TDC" bgcolor="#3B8BE4" valign="top" width="100">File
+3/1/1-8.pdf">1-8

@@ -1,11 +1,16 @@
 ﻿d74286b8a70bed4609d55b30199527cf" name="ad74286b8a70bed4609d55b30199527cf" enctype="multipart/form-data" method="post" target="_self" onsubmit="return validateForm('ad74286b8a70bed4609d55b30199527cf
-466:pages:1466
-466" target="_self">2016-1-6
-802
-6. — Vol. 18, N 1
+1466:pages:1466
+1466" target="_self">2016-1-6
+1802"></a><table bgcolor="#ffffff" cellpadding="3" cellspacing="1" width="100%
+class="TDC" bgcolor="#3B8BE4" valign="top" width="100
+amp; Processing. — 2016. — Vol. 18, N 1
 52–62
+doc.gif" alt="" width="50"/> PDF,DOC
+onclick="history.back()" value="<<back" type="button
 Investigation of the factors of informal communication inside social networks for identification of agents carrying privacy threats 
  Nikiforova L.A., Goroh N.V., Lebedeva G.A., Salieva O.V. 
-It is suggested the results of an investigation of informal communication in social net-works for identification of agents carrying the privacy threats. The developed computer program as a tool for the research is presented. The example of application of the developed tool for the analysis of the social group is proposed. Tabl.: 1. Fig.: 6. Refs: 14 titles.
-agent, threat of privacy, identification, social network, informal communication
+It is suggested the results of an investigation of informal communication in social net-works for identification of agents carrying the privacy threats. The developed computer program as a tool for the research is presented. The example of application of the developed tool for the analysis of the social group is proposed. Tabl.: 1. Fig.: 6. Refs: 14 titles.</td></tr><tr><td class="TDC" bgcolor="#3B8BE4" valign="top" width="100
+agent, threat of privacy, identification, social network, informal communication.</td></tr><tr><td class="TDC" bgcolor="#3B8BE4" valign="top" width="100
+null
+class="TDC" bgcolor="#3B8BE4" valign="top" width="100">File
 6/1/1-6.pdf">1-6

@@ -1,11 +1,16 @@
 ﻿8db53afb2f89dd8d4fe792b1fdb920be" name="a8db53afb2f89dd8d4fe792b1fdb920be" enctype="multipart/form-data" method="post" target="_self" onsubmit="return validateForm('a8db53afb2f89dd8d4fe792b1fdb920be
-470:pages:1470
-470" target="_self">2016-1-8
-806
-6. — Vol. 18, N 1
+1470:pages:1470
+1470" target="_self">2016-1-8
+1806"></a><table bgcolor="#ffffff" cellpadding="3" cellspacing="1" width="100%
+class="TDC" bgcolor="#3B8BE4" valign="top" width="100
+amp; Processing. — 2016. — Vol. 18, N 1
 70–77
+doc.gif" alt="" width="50"/> PDF,DOC
+onclick="history.back()" value="<<back" type="button
 A multi-agent model of information dissemination in social networks 
  Lande D.V., Hraivoronska A.n., Berezin B.А. 
-It is demonstrated the rules of the multi-network operation. Statistical regularities associated with the «lifecycle» of agents, namely, information messages have been determined. The statistical distributions touching upon likes and reposts have been found within the model corresponding to the Weibull distribution as seen from the results of simulation. These simulations have been verified by examining the real microblogging network Twitter. Fig.: 4. Refs: 5 titles.
-Social network, Modeling, Weibull distribution, Multi-agent system, Information dissemination
+It is demonstrated the rules of the multi-network operation. Statistical regularities associated with the «lifecycle» of agents, namely, information messages have been determined. The statistical distributions touching upon likes and reposts have been found within the model corresponding to the Weibull distribution as seen from the results of simulation. These simulations have been verified by examining the real microblogging network Twitter. Fig.: 4. Refs: 5 titles.</td></tr><tr><td class="TDC" bgcolor="#3B8BE4" valign="top" width="100
+Social network, Modeling, Weibull distribution, Multi-agent system, Information dissemination.</td></tr><tr><td class="TDC" bgcolor="#3B8BE4" valign="top" width="100
+null
+class="TDC" bgcolor="#3B8BE4" valign="top" width="100">File
 6/1/1-8.pdf">1-8

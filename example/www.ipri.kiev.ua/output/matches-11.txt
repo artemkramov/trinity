@@ -1,11 +1,16 @@
 ﻿1134b0878dfa0806515218febd819226" name="a1134b0878dfa0806515218febd819226" enctype="multipart/form-data" method="post" target="_self" onsubmit="return validateForm('a1134b0878dfa0806515218febd819226
-458:pages:1458
-458" target="_self">2016-1-2
-794
-6. — Vol. 18, N 1
+1458:pages:1458
+1458" target="_self">2016-1-2
+1794"></a><table bgcolor="#ffffff" cellpadding="3" cellspacing="1" width="100%
+class="TDC" bgcolor="#3B8BE4" valign="top" width="100
+amp; Processing. — 2016. — Vol. 18, N 1
 14–22
+doc.gif" alt="" width="50"/> PDF,DOC
+onclick="history.back()" value="<<back" type="button
 Development of representations of hyperbolic and trigonometric nonlinearities inside the system of generalized quaternions 
 Kalinovsky Ja.A., Boyarinova Yu.E., Sinkova T.V., Sukalo A.S. 
-It is considered the process of mathematical modeling for representations of hyperbolic and trigonometric nonlinearities in hypercomplex number system of generalized quaternions by the method of associated system of differential equations. Some properties of the representations and their relationship with the representations of nonlinearities in certain noncommutative hypercomplex numerical systems having dimension four have been analyzed. Fig.: 4. Refs: 11 titles.
-hypercomplex number system, basis, hypercomplex functions, hyperbolic functions, trigonometric functions, generalized of the quaternions
+It is considered the process of mathematical modeling for representations of hyperbolic and trigonometric nonlinearities in hypercomplex number system of generalized quaternions by the method of associated system of differential equations. Some properties of the representations and their relationship with the representations of nonlinearities in certain noncommutative hypercomplex numerical systems having dimension four have been analyzed. Fig.: 4. Refs: 11 titles.</td></tr><tr><td class="TDC" bgcolor="#3B8BE4" valign="top" width="100
+hypercomplex number system, basis, hypercomplex functions, hyperbolic functions, trigonometric functions, generalized of the quaternions.</td></tr><tr><td class="TDC" bgcolor="#3B8BE4" valign="top" width="100
+null
+class="TDC" bgcolor="#3B8BE4" valign="top" width="100">File
 6/1/1-2.pdf">1-2
