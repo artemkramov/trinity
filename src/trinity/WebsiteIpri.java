@@ -5,6 +5,7 @@
  */
 package trinity;
 
+import java.sql.JDBCType;
 import java.util.ArrayList;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -15,14 +16,20 @@ import org.jsoup.select.Elements;
  *
  * @author admin
  */
-public class Parser {
+public class WebsiteIpri extends Website {
+    
+    public WebsiteIpri() {
+        this.url = "ipri.kiev.ua";
+        this.tableName = "ipri";
+    }
     
     /**
-     * Get parsed data from the site www.ipri.kiev.ua
+     * Get data from the html page of the given site
      * @param html
      * @return 
      */
-    public ArrayList<String> getIPRIData(String html) {
+    @Override
+    public ArrayList<String> fetchData(String html) {
         ArrayList<String> data = new ArrayList<>();
         Document document = Jsoup.parse(html);
         Elements tables = document.select("table");
@@ -43,25 +50,23 @@ public class Parser {
         return data;
     }
     
-   
-    
     /**
-     * Get data from the html page of the given site
-     * @param siteName
-     * @param html
-     * @return 
+     * Write all matches to the database
+     * @param matches
+     * @param dataParser 
      */
-    public ArrayList<String> fetchData(String siteName, String html) {
-        ArrayList<String> list;
-        switch (siteName) {
-            case "ipri.kiev.ua":
-                list = this.getIPRIData(html);
-                break;
-            default:
-                list = this.getIPRIData(html);
-                break;
+    @Override
+    public void writeMatchesToDB(ArrayList<String> matches, ArrayList<String> dataParser) {
+        ArrayList<String> data = new ArrayList<>();
+        DBClient client = new DBClient();
+        if (matches.size() > 10 && dataParser.size() > 0) {
+            // Retrieve necessary attributes like title, annotation, authors, keywords
+            data.add(matches.get(4));
+            data.add(matches.get(5));
+            data.add(matches.get(6));
+            data.add(matches.get(7));
+            client.insertIPRI(data, dataParser);
         }
-        return list;
     }
-
+    
 }

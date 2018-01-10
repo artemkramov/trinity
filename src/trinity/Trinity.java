@@ -27,22 +27,50 @@ public class Trinity {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        String siteName = "ipri.kiev.ua";
-        String folderPath = String.format("../Spider/result/%s/", siteName);
+        // Input site for the program
+        Website website;
+        
+        int switchWebsites = 2; // 1 - ipri.kiev.ua, 2 - journal.iasa.kpi.ua
+        switch (switchWebsites) {
+            case 1:
+                website = new WebsiteIpri();
+                break;
+            case 2:
+                website = new WebsiteIasa();
+                break;
+            default:
+                website = new WebsiteIpri();
+                break;
+        }
+        
+        // Path to folder where all related files are located
+        String folderPath = String.format("../Spider/result/%s/", website.getUrl());
+        
+        // Path to output directory
         String outputFolderPath = folderPath + "/output/";
+        
+        // Input directory
         File inputDirectory = new File(folderPath + "/input/");
+        
+        // Get documents for pattern generating
         ArrayList<String> fileNamesForPattern = getDocumentsForPattern(inputDirectory);
         ArrayList<String> documents = readFiles(fileNamesForPattern);
+        
+        // Set and build tree
         TrinityTree tree = new TrinityTree();
         tree.setDocuments(documents);
         tree.buildTree(15, 600);
-//        tree.traverseForPrint();
+        
+        // Generate pattern from the tree
         String template = tree.learnTemplate();
         writeFile(outputFolderPath + "pattern.txt", template);
+        
+        // Compile pattern
         Pattern TAG_REGEX = Pattern.compile(template);
         documents = new ArrayList<>();
+        
+        // Generate the verification set
         int testSize = inputDirectory.listFiles().length;
-        Parser parser = new Parser();
         for (final File fileEntry : inputDirectory.listFiles()) {
             if (!fileEntry.isDirectory()) {
                 documents.add(readFile(fileEntry.getAbsolutePath()));
@@ -53,9 +81,13 @@ public class Trinity {
             }
         }
         
+        // Clean database table
+        website.cleanTable();
+        
+        // Extract data by the pattern and parser
         for (int i = 0; i < documents.size(); i++) {
             ArrayList<String> tags = new ArrayList<>();
-            ArrayList<String> tagsParser = parser.fetchData(siteName, documents.get(i));
+            ArrayList<String> tagsParser = website.fetchData(documents.get(i));
             Matcher matcher = TAG_REGEX.matcher(documents.get(i));
             while (matcher.find()) {
                 for (int j = 1; j <= matcher.groupCount(); j++) {
@@ -65,11 +97,18 @@ public class Trinity {
             System.gc();
             // Remove duplicates
             tags = new ArrayList<>(new LinkedHashSet<>(tags));
-//            writeMatches(tags, String.format("%s/matches-%d.txt", outputFolderPath, i));
-            writeMatchesToDB(tags, tagsParser);
+            writeMatches(tags, String.format("%s/matches-%d.txt", outputFolderPath, i));
+            
+            // Write results to the database
+            website.writeMatchesToDB(tags, tagsParser);
         }
     }
 
+    /**
+     * Read all files from the given list
+     * @param fileNames
+     * @return
+     */
     public static ArrayList<String> readFiles(ArrayList<String> fileNames) {
         ArrayList<String> list = new ArrayList<>();
         fileNames.forEach((fileName) -> {
@@ -77,10 +116,17 @@ public class Trinity {
         });
         return list;
     }
-
+    
+    /**
+     * Get documents for pattern generating
+     * @param directory
+     * @return 
+     */
     public static ArrayList<String> getDocumentsForPattern(File directory) {
         ArrayList<String> fileNames = new ArrayList<>();
         int fileCount = directory.list().length;
+        
+        // Choose 20% of the input file
         int chunk = (int)(fileCount / 20);
         for (int i = 1; i < fileCount; i += chunk) {
             String fileName = Integer.toString(i) + ".txt";
@@ -88,7 +134,12 @@ public class Trinity {
         }
         return fileNames;
     }
-
+    
+    /**
+     * Read file from the given path
+     * @param filePath
+     * @return 
+     */
     public static String readFile(String filePath) {
         StringBuilder contentBuilder = new StringBuilder();
         try {
@@ -103,7 +154,12 @@ public class Trinity {
         String content = contentBuilder.toString().replaceAll(">\\s+<", "><");
         return content;
     }
-
+    
+    /**
+     * Write UTF-8 content to file
+     * @param filePath
+     * @param pattern 
+     */
     public static void writeFile(String filePath, String pattern) {
         try {
             FileOutputStream fileStream = new FileOutputStream(new File(filePath));
@@ -114,7 +170,12 @@ public class Trinity {
         } catch (Exception ex) {
         }
     }
-
+    
+    /**
+     * Write all matches to the file
+     * @param matches
+     * @param folderPath 
+     */
     public static void writeMatches(ArrayList<String> matches, String folderPath) {
         String listString = "";
         for (String match : matches) {
@@ -123,17 +184,6 @@ public class Trinity {
         writeFile(folderPath, listString);
     }
     
-    public static void writeMatchesToDB(ArrayList<String> matches, ArrayList<String> dataParser) {
-        ArrayList<String> data = new ArrayList<>();
-        DBClient client = new DBClient();
-        if (matches.size() > 10 && dataParser.size() > 0) {
-            data.add(matches.get(4));
-            data.add(matches.get(5));
-            data.add(matches.get(6));
-            data.add(matches.get(7));
-            client.insertIPRI(data, dataParser);
-        }
-        
-    }
+    
 
 }
