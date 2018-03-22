@@ -30,13 +30,28 @@ public class Trinity {
         // Input site for the program
         Website website;
         
-        int switchWebsites = 2; // 1 - ipri.kiev.ua, 2 - journal.iasa.kpi.ua
+        int switchWebsites = 7; // 1 - ipri.kiev.ua, 2 - journal.iasa.kpi.ua
         switch (switchWebsites) {
             case 1:
                 website = new WebsiteIpri();
                 break;
             case 2:
                 website = new WebsiteIasa();
+                break;
+            case 3:
+                website = new WebsiteInfotelesc();
+                break;
+            case 4:
+                website = new WebsiteBulletinEconom();
+                break;
+            case 5:
+                website = new WebsiteVisnykGeo();
+                break;
+            case 6:
+                website = new WebsiteAstroBulletin();
+                break;
+            case 7:
+                website = new WebsiteVisnykSoc();
                 break;
             default:
                 website = new WebsiteIpri();
@@ -127,10 +142,17 @@ public class Trinity {
         int fileCount = directory.list().length;
         
         // Choose 20% of the input file
-        int chunk = (int)(fileCount / 20);
+        int chunk = (int)(fileCount / 5);
         for (int i = 1; i < fileCount; i += chunk) {
             String fileName = Integer.toString(i) + ".txt";
-            fileNames.add(directory.getPath() + "/" + fileName);
+            String fullFilePath = directory.getPath() + "/" + fileName;
+            File f = new File(fullFilePath);
+            if (f.exists()) {
+                fileNames.add(fullFilePath);
+            }
+            else {
+                int a = 4;
+            }
         }
         return fileNames;
     }

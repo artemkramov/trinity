@@ -301,7 +301,7 @@ public class TrinityTree {
                     if (this.separator.containsNull()) {
                         regex += ")?";
                     } else {
-                        regex += ")?";
+                        regex += ")*";
                     }
                 }
                 regex += this.suffix.learnTemplate(tree);
